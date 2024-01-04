@@ -3,12 +3,13 @@
     "version": "1.0.0",
     "scripts": {
         "compile-scss": "sass src/styles/main.scss dist/styles/styles.css --style compressed",
-        "compile-scripts": "concat src/scripts/*.js -o dist/scripts/scripts.js",
-        "compile-vendor-scripts": "concat src/scripts/vendor/*.js -o dist/scripts/vendor.js",
-        "watch": "npm run compile-scss -- --watch & npm run compile-scripts -- --watch & npm run compile-vendor-scripts -- --watch"
+        "compile-scripts": "nodemon -w src/scripts -e js -x \"concat src/scripts/*.js -o dist/scripts/scripts.js\"",
+        "compile-vendor-scripts": "nodemon -w src/scripts/vendor -e js -x \"concat src/scripts/vendor/*.js -o dist/scripts/vendor.js\"",
+        "watch": "npm run compile-scss -- --watch & npm run compile-scripts & npm run compile-vendor-scripts"
     },
     "devDependencies": {
         "sass": "^1.43.4",
-        "concat": "^1.0.3"
+        "concat": "^1.0.3",
+        "nodemon": "^2.0.15"
     }
 }

@@ -5,10 +5,23 @@
     <title>Scratchpad</title>
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='50%25' font-size='90' dy='0.35em'%3E📝%3C/text%3E%3C/svg%3E" type="image/svg+xml">
     <link rel="stylesheet" href="dist/styles/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
 </head>
 <body>
+    <main>
+        <textarea id="editor"></textarea>
+    </main>
+
+    <aside id="toolbar">   
+        <div class="wrapper">
+
+        </div>
+    </aside>
 
     <script src="dist/scripts/vendor.js"></script>
     <script src="dist/scripts/scripts.js"></script>
+    <script>
+        init();
+    </script>
 </body>
 </html>
