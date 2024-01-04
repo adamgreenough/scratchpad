@@ -1,0 +1,14 @@
+{
+    "name": "scratchpad",
+    "version": "1.0.0",
+    "scripts": {
+        "compile-scss": "sass src/styles/main.scss dist/styles/styles.css --style compressed",
+        "compile-scripts": "concat src/scripts/*.js -o dist/scripts/scripts.js",
+        "compile-vendor-scripts": "concat src/scripts/vendor/*.js -o dist/scripts/vendor.js",
+        "watch": "npm run compile-scss -- --watch & npm run compile-scripts -- --watch & npm run compile-vendor-scripts -- --watch"
+    },
+    "devDependencies": {
+        "sass": "^1.43.4",
+        "concat": "^1.0.3"
+    }
+}
