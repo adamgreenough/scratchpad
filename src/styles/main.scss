@@ -3,6 +3,7 @@
 
 :root {
     --wrapper-width: 1200px;
+    --font-size: clamp(15px, 2.5vw, 18px);
     --body-background: yellow;
     --toolbar-background: red;
     --toolbar-border: green;
@@ -12,8 +13,13 @@
     --scrollbar-handle: purple;
 }
 
+html {
+    font-size: var(--font-size);
+}
+
 body, textarea, input { 
     font-family: 'Fira Code', monospace; 
+    font-size: var(--font-size);
 } 
 
 @supports (font-variation-settings: normal) {
@@ -37,7 +43,7 @@ main {
         resize: none;
         font-size: 1rem;
         line-height: 1.5;
-        padding: clamp(1.5rem, 4vh, 3rem);
+        padding: clamp(1.5rem, 5vw, 3rem);
         color: var(--editor-text);
 
         &:focus {

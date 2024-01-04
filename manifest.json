@@ -3,7 +3,7 @@
   "short_name": "Scratchpad",
   "theme_color": "#fff",
   "background_color": "#fff",
-  "display": "minimal-ui",
+  "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "icons": [
